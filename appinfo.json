@@ -11,6 +11,11 @@
     "resources": {
         "media": [
             {
+                "file": "images/breakfast.png",
+                "name": "BREAKFAST",
+                "type": "png-trans"
+            },
+            {
                 "file": "images/tick_white.png",
                 "name": "TICK_WHITE",
                 "type": "png"

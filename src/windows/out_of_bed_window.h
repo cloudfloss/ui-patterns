@@ -2,6 +2,6 @@
 
 #include <pebble.h>
 
-#define DIALOG_CHOICE_WINDOW_MESSAGE  "How do you feel?"
+#define OUT_OF_BED_WINDOW_MESSAGE  "How do you feel?"
 
-void dialog_choice_window_push();
+void out_of_bed_window_push();
