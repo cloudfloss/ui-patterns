@@ -25,7 +25,7 @@ static void draw_row_callback(GContext *ctx, Layer *cell_layer, MenuIndex *cell_
             menu_cell_basic_draw(ctx, cell_layer, "Eat Breakfast", NULL, NULL);
             break;
         case 3:
-            menu_cell_basic_draw(ctx, cell_layer, "Say Hi", NULL, NULL);
+            menu_cell_basic_draw(ctx, cell_layer, "Say Hello", NULL, NULL);
             break;
         default:
             break;
