@@ -15,7 +15,7 @@ static void window_load(Window *window) {
     Layer *window_layer = window_get_root_layer(window);
     GRect bounds = layer_get_bounds(window_layer);
 
-    s_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_HELLO_BLACK);
+    s_icon_bitmap = gbitmap_create_with_resource(RESOURCE_ID_HELLO_WHITE);
     GRect bitmap_bounds = gbitmap_get_bounds(s_icon_bitmap);
 
     s_icon_layer = bitmap_layer_create(GRect((bounds.size.w / 2) - (bitmap_bounds.size.w / 2) - (ACTION_BAR_WIDTH / 2), 10, bitmap_bounds.size.w, bitmap_bounds.size.h));
@@ -24,7 +24,7 @@ static void window_load(Window *window) {
     layer_add_child(window_layer, bitmap_layer_get_layer(s_icon_layer));
 
     s_label_layer = text_layer_create(GRect(10, 10 + bitmap_bounds.size.h + 5, 124 - ACTION_BAR_WIDTH, bounds.size.h - (10 + bitmap_bounds.size.h + 15)));
-    text_layer_set_text(s_label_layer, BREAKFAST_WINDOW_MESSAGE);
+    text_layer_set_text(s_label_layer, SAY_HELLO_WINDOW_MESSAGE);
     text_layer_set_background_color(s_label_layer, GColorClear);
     text_layer_set_text_alignment(s_label_layer, GTextAlignmentCenter);
     text_layer_set_font(s_label_layer, fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD));
@@ -56,7 +56,7 @@ static void window_unload(Window *window) {
 void say_hello_window_push() {
     if(!s_main_window) {
         s_main_window = window_create();
-        window_set_background_color(s_main_window, GColorOrange);
+        window_set_background_color(s_main_window, GColorPurple);
         window_set_window_handlers(s_main_window, (WindowHandlers) {
                 .load = window_load,
                 .unload = window_unload,

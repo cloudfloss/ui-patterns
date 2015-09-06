@@ -23,8 +23,10 @@ static void draw_row_callback(GContext *ctx, Layer *cell_layer, MenuIndex *cell_
             break;
         case 2:
             menu_cell_basic_draw(ctx, cell_layer, "Eat Breakfast", NULL, NULL);
+            break;
         case 3:
             menu_cell_basic_draw(ctx, cell_layer, "Say Hi", NULL, NULL);
+            break;
         default:
             break;
     }
@@ -40,8 +42,10 @@ static void select_callback(struct MenuLayer *menu_layer, MenuIndex *cell_index,
             break;
         case 2:
             breakfast_window_push();
+            break;
         case 3:
             say_hello_window_push();
+            break;
         default:
             break;
     }
