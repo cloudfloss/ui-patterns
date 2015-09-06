@@ -37,7 +37,7 @@ static void draw_row_callback(GContext *ctx, Layer *cell_layer, MenuIndex *cell_
             menu_cell_basic_draw(ctx, cell_layer, "Go Home", NULL, NULL);
             break;
         case 6:
-            menu_cell_basic_draw(ctx, cell_layer, "Go Home", NULL, NULL);
+            menu_cell_basic_draw(ctx, cell_layer, "Eat Dinner", NULL, NULL);
             break;
         default:
             break;

@@ -11,14 +11,34 @@
     "resources": {
         "media": [
             {
-                "file": "images/hello.png",
-                "name": "HELLO",
+                "file": "images/steak.png",
+                "name": "STEAK",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/car.png",
+                "name": "CAR",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/hamburger.png",
+                "name": "HAMBURGER",
                 "type": "png-trans"
             },
             {
                 "file": "images/cross.png",
                 "name": "CROSS",
                 "type": "png"
+            },
+            {
+                "file": "images/breakfast.png",
+                "name": "BREAKFAST",
+                "type": "png-trans"
+            },
+            {
+                "file": "images/hello.png",
+                "name": "HELLO",
+                "type": "png-trans"
             },
             {
                 "file": "images/tick_white.png",
@@ -32,12 +52,7 @@
             },
             {
                 "file": "images/pill.png",
-                "name": "CONFIRM",
-                "type": "png-trans"
-            },
-            {
-                "file": "images/breakfast.png",
-                "name": "BREAKFAST",
+                "name": "PILL",
                 "type": "png-trans"
             }
         ]
