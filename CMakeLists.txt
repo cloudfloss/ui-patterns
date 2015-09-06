@@ -29,8 +29,8 @@ set(SOURCE_FILES
     src/layers/selection_layer.h
     src/windows/checkbox_window.c
     src/windows/checkbox_window.h
-    src/windows/dialog_choice_window.c
-    src/windows/dialog_choice_window.h
+        src/windows/medicine_window.c
+        src/windows/medicine_window.h
     src/windows/dialog_config_window.c
     src/windows/dialog_config_window.h
     src/windows/dialog_message_window.c
@@ -51,6 +51,6 @@ set(SOURCE_FILES
     appinfo.json
     LICENSE
     README.md
-    wscript src/windows/out_of_bed_window.c src/windows/out_of_bed_window.h src/windows/breakfast_window.c src/windows/breakfast_window.h src/windows/say_hello_window.c src/windows/say_hello_window.h src/windows/lunch_window.c src/windows/lunch_window.h)
+    wscript src/windows/out_of_bed_window.c src/windows/out_of_bed_window.h src/windows/breakfast_window.c src/windows/breakfast_window.h src/windows/say_hello_window.c src/windows/say_hello_window.h src/windows/lunch_window.c src/windows/lunch_window.h src/windows/home_on_time_window.c src/windows/home_on_time_window.h src/windows/dinner_window.c src/windows/dinner_window.h)
 
 add_executable(moodwatch_time ${SOURCE_FILES})

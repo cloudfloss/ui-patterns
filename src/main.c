@@ -1,10 +1,13 @@
 #include <pebble.h>
 
-#include "windows/dialog_choice_window.h"
+#include "windows/medicine_window.h"
 #include "windows/breakfast_window.h"
 #include "windows/say_hello_window.h"
+#include "windows/lunch_window.h"
+#include "windows/home_on_time_window.h"
+#include "windows/dinner_window.h"
 
-#define NUM_WINDOWS 5
+#define NUM_WINDOWS 7
 
 static Window *s_main_window;
 static MenuLayer *s_menu_layer;
@@ -30,6 +33,12 @@ static void draw_row_callback(GContext *ctx, Layer *cell_layer, MenuIndex *cell_
         case 4:
             menu_cell_basic_draw(ctx, cell_layer, "Eat Lunch", NULL, NULL);
             break;
+        case 5:
+            menu_cell_basic_draw(ctx, cell_layer, "Go Home", NULL, NULL);
+            break;
+        case 6:
+            menu_cell_basic_draw(ctx, cell_layer, "Go Home", NULL, NULL);
+            break;
         default:
             break;
     }
@@ -38,10 +47,10 @@ static void draw_row_callback(GContext *ctx, Layer *cell_layer, MenuIndex *cell_
 static void select_callback(struct MenuLayer *menu_layer, MenuIndex *cell_index, void *context) {
     switch(cell_index->row) {
         case 0:
-            dialog_choice_window_push();
+            medicine_window_push();
             break;
         case 1:
-            dialog_choice_window_push();
+            medicine_window_push();
             break;
         case 2:
             breakfast_window_push();
@@ -51,6 +60,12 @@ static void select_callback(struct MenuLayer *menu_layer, MenuIndex *cell_index,
             break;
         case 4:
             lunch_window_push();
+            break;
+        case 5:
+            home_on_time_window_push();
+            break;
+        case 6:
+            dinner_window_push();
             break;
         default:
             break;
