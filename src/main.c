@@ -1,9 +1,10 @@
 #include <pebble.h>
 
 #include "windows/dialog_choice_window.h"
-  #include "windows/breakfast_window.h"
+#include "windows/breakfast_window.h"
+#include "windows/say_hello_window.h"
 
-#define NUM_WINDOWS 3
+#define NUM_WINDOWS 4
 
 static Window *s_main_window;
 static MenuLayer *s_menu_layer;
@@ -22,6 +23,8 @@ static void draw_row_callback(GContext *ctx, Layer *cell_layer, MenuIndex *cell_
             break;
         case 2:
             menu_cell_basic_draw(ctx, cell_layer, "Eat Breakfast", NULL, NULL);
+        case 3:
+            menu_cell_basic_draw(ctx, cell_layer, "Say Hi", NULL, NULL);
         default:
             break;
     }
@@ -37,6 +40,8 @@ static void select_callback(struct MenuLayer *menu_layer, MenuIndex *cell_index,
             break;
         case 2:
             breakfast_window_push();
+        case 3:
+            say_hello_window_push();
         default:
             break;
     }
