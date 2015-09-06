@@ -51,6 +51,6 @@ set(SOURCE_FILES
     appinfo.json
     LICENSE
     README.md
-    wscript)
+    wscript src/windows/out_of_bed_window.c src/windows/out_of_bed_window.h src/windows/breakfast_window.c src/windows/breakfast_window.h)
 
 add_executable(moodwatch_time ${SOURCE_FILES})
