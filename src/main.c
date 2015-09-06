@@ -14,23 +14,14 @@ static uint16_t get_num_rows_callback(MenuLayer *menu_layer, uint16_t section_in
 static void draw_row_callback(GContext *ctx, Layer *cell_layer, MenuIndex *cell_index, void *context) {
     switch(cell_index->row) {
         case 0:
-            menu_cell_basic_draw(ctx, cell_layer, "Check Meds", NULL, NULL);
+            menu_cell_basic_draw(ctx, cell_layer, "Get Out of Bed", NULL, NULL);
             break;
         case 1:
-            menu_cell_basic_draw(ctx, cell_layer, "Choice Dialog", NULL, NULL);
+            menu_cell_basic_draw(ctx, cell_layer, "Check Meds", NULL, NULL);
             break;
         default:
             break;
     }
-}
-
-static int16_t get_cell_height_callback(struct MenuLayer *menu_layer, MenuIndex *cell_index, void *context) {
-    return CHECKBOX_WINDOW_CELL_HEIGHT;
-}
-
-static void pin_complete_callback(PIN pin, void *context) {
-    APP_LOG(APP_LOG_LEVEL_INFO, "Pin was %d %d %d", pin.digits[0], pin.digits[1], pin.digits[2]);
-    pin_window_pop((PinWindow*)context, true);
 }
 
 static void select_callback(struct MenuLayer *menu_layer, MenuIndex *cell_index, void *context) {
@@ -67,7 +58,6 @@ static void window_load(Window *window) {
     menu_layer_set_callbacks(s_menu_layer, NULL, (MenuLayerCallbacks) {
             .get_num_rows = (MenuLayerGetNumberOfRowsInSectionsCallback)get_num_rows_callback,
             .draw_row = (MenuLayerDrawRowCallback)draw_row_callback,
-            .get_cell_height = (MenuLayerGetCellHeightCallback)get_cell_height_callback,
             .select_click = (MenuLayerSelectCallback)select_callback,
             .draw_header = (MenuLayerDrawHeaderCallback)draw_header_callback,
             .get_header_height = (MenuLayerGetHeaderHeightCallback)get_header_height_callback,

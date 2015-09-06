@@ -31,7 +31,7 @@ static void window_load(Window *window) {
   text_layer_set_text_color(s_label_layer, GColorWhite);
   layer_add_child(window_layer, text_layer_get_layer(s_label_layer));
 
-  s_tick_bitmap = gbitmap_create_with_resource(RESOURCE_ID_TICK);
+  s_tick_bitmap = gbitmap_create_with_resource(RESOURCE_ID_TICK_WHITE);
   s_cross_bitmap = gbitmap_create_with_resource(RESOURCE_ID_CROSS);
 
   s_action_bar_layer = action_bar_layer_create();

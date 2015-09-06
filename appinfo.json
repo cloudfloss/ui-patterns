@@ -11,23 +11,23 @@
     "resources": {
         "media": [
             {
-                "file": "images/pill.png",
-                "name": "CONFIRM",
-                "type": "png-trans"
-            },
-            {
-                "file": "images/tick_black.png",
-                "name": "TICK_BLACK",
-                "type": "png"
-            },
-            {
                 "file": "images/tick_white.png",
                 "name": "TICK_WHITE",
                 "type": "png"
             },
             {
+                "file": "images/pill.png",
+                "name": "CONFIRM",
+                "type": "png-trans"
+            },
+            {
                 "file": "images/cross.png",
                 "name": "CROSS",
+                "type": "png"
+            },
+            {
+                "file": "images/tick_black.png",
+                "name": "TICK_BLACK",
                 "type": "png"
             }
         ]
