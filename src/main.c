@@ -4,7 +4,7 @@
 #include "windows/breakfast_window.h"
 #include "windows/say_hello_window.h"
 
-#define NUM_WINDOWS 4
+#define NUM_WINDOWS 5
 
 static Window *s_main_window;
 static MenuLayer *s_menu_layer;
@@ -27,6 +27,9 @@ static void draw_row_callback(GContext *ctx, Layer *cell_layer, MenuIndex *cell_
         case 3:
             menu_cell_basic_draw(ctx, cell_layer, "Say Hello", NULL, NULL);
             break;
+        case 4:
+            menu_cell_basic_draw(ctx, cell_layer, "Eat Lunch", NULL, NULL);
+            break;
         default:
             break;
     }
@@ -45,6 +48,9 @@ static void select_callback(struct MenuLayer *menu_layer, MenuIndex *cell_index,
             break;
         case 3:
             say_hello_window_push();
+            break;
+        case 4:
+            lunch_window_push();
             break;
         default:
             break;
